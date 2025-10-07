@@ -4,22 +4,49 @@
 int main()
 {
 
-	ScavTrap s1("Gatey");
-	s1.attack("Intruder");
-	s1.takeDamage(50);
-	s1.beRepaired(25);
-	s1.guardGate();
+	{
+		ScavTrap R1("Robot1");
 
-	// // std::cout << "\n--- Construction/Destruction Chaining ---\n";
-	// // {
-	// // 	ScavTrap temp("Temp");
-	// // } 
+		for (int i = 0; i < 50; i++)
+			R1.attack("Sander");
 
-	// std::cout << "\n--- Canonical Form Tests ---\n";
-	// ScavTrap s2("CopyMe");
-	// ScavTrap s3 = s2; 
-	// ScavTrap s4;
-	// s4 = s2; 
+		R1.attack("Sander"); // ScavTrap Robot1 can't attack (no HP/energy)
+	}
+
+	{
+		ScavTrap R1("Robot1");
+
+		R1.attack("Sander");
+		R1.attack("Sander");
+
+		R1.takeDamage(50);
+		R1.takeDamage(50);
+
+		R1.attack("Sander");
+
+		// ClapTrap Robot1 takes 50 damage and dies
+		// ScavTrap Robot1 can't attack (no HP/energy)
+
+	}
+
+	{
+		ScavTrap R1("Robot1");
+
+		R1.attack("Bos");
+
+		for (int i = 0; i < 10; i++)
+			R1.attack("bos");
+
+		R1.takeDamage(50);
+
+		R1.attack("BOB");
+
+		R1.takeDamage(40);
+
+		R1.beRepaired(100);
+
+
+	}
 
 	return 0;
 }

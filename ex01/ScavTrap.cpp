@@ -12,11 +12,10 @@ ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name)
 }
 
 
-ScavTrap::ScavTrap(const ScavTrap& src) : ClapTrap(src) 
+ScavTrap::ScavTrap(const ScavTrap& src) : ClapTrap(src)
 {
     std::cout << "ScavTrap " << _name << " copy-constructed" << std::endl;
 }
-
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& src) 
 {
@@ -34,7 +33,8 @@ ScavTrap::~ScavTrap()
 // Override attack()
 void ScavTrap::attack(const std::string& target) 
 {
-    if (_hitPoints == 0 || _energyPoints == 0) {
+    if (_hitPoints == 0 || _energyPoints == 0) 
+	{
         std::cout << "ScavTrap " << _name << " can't attack (no HP/energy)" << std::endl;
         return;
     }
@@ -45,5 +45,5 @@ void ScavTrap::attack(const std::string& target)
 
 void ScavTrap::guardGate() 
 {
-    std::cout << "ScavTrap " << _name << " has entered Gate keeper mode!\n";
+    std::cout << "ScavTrap " << _name << " has entered Gate keeper mode\n";
 }
