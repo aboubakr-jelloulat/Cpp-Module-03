@@ -3,7 +3,7 @@
 #include "ClapTrap.h"
 #include <iostream>
 
-class FragTrap : public ClapTrap
+class FragTrap : virtual public ClapTrap
 {
 public:
     FragTrap(const std::string& name);
@@ -14,5 +14,5 @@ public:
     void highFivesGuys(void);
 
     // override 
-    void attack(const std::string& target) ;
+    void attack(const std::string& target);
 };

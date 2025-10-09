@@ -3,7 +3,7 @@
 #include "ClapTrap.h"
 #include <iostream>
 
-class ScavTrap : public ClapTrap 
+class ScavTrap : virtual public ClapTrap 
 {
 public:
 
