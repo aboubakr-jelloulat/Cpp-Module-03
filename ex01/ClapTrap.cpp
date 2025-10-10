@@ -11,8 +11,8 @@ ClapTrap::ClapTrap(const std::string& name) : _name(name), _hitPoints(10), _ener
 
 ClapTrap::ClapTrap(const ClapTrap& src)
 {
+    (void)src;
     std::cout << "ClapTrap " << _name << " copy-constructed" << std::endl;
-	*this = src;
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& src) 

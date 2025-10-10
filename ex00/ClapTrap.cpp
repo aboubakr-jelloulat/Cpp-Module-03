@@ -8,8 +8,8 @@ ClapTrap::ClapTrap(const std::string& name)
 
 ClapTrap::ClapTrap(const ClapTrap& src)
 {
+	(void)src;
     std::cout << "ClapTrap Copy Constructor Called" << std::endl;
-    *this = src;
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& src)

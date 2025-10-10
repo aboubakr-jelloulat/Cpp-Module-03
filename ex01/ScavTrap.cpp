@@ -11,11 +11,22 @@ ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name)
     std::cout << "ScavTrap " << _name << " constructed" << std::endl;
 }
 
+/*
+    Copy Constructor:
+        Used when a new object is created from an existing one. 
+        It initializes the new object's memory and copies all data from the source.
+*/
 
 ScavTrap::ScavTrap(const ScavTrap& src) : ClapTrap(src)
 {
     std::cout << "ScavTrap " << _name << " copy-constructed" << std::endl;
 }
+
+/*
+    Assignment Operator:
+        Used when an existing object is assigned the values of another existing object. 
+        The existing object might already have resources allocated.
+*/
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& src) 
 {

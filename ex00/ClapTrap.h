@@ -4,7 +4,7 @@
 #include <string>
 
 class ClapTrap
-{
+{ 
 private:
 	std::string		_name;
 	unsigned int	_hitPoints;
