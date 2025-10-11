@@ -17,6 +17,9 @@ $(NAME): $(OBJ)
 	@echo  "\nCreated executable '$(NAME)'"
 
 
+# Prerequisites: %.cpp, Makefile, *h
+# Order-only prerequisite: $(OBJDIR)
+
 $(OBJDIR)/%.o: %.cpp Makefile *h | $(OBJDIR)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 	
