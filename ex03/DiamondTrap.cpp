@@ -45,3 +45,9 @@ void DiamondTrap::whoAmI()
     std::cout << "ClapTrap name: " << ClapTrap::_name << std::endl;
 }
 
+
+
+// void DiamondTrap::takeDamage(unsigned int amount)
+// {
+// 	std::cout << "Asidi f9na : " << amount << std::endl;
+// }

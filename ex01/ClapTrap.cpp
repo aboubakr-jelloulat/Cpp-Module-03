@@ -10,8 +10,11 @@ ClapTrap::ClapTrap(const std::string& name) : _name(name), _hitPoints(10), _ener
 
 
 ClapTrap::ClapTrap(const ClapTrap& src)
+    : _name(src._name),
+      _hitPoints(src._hitPoints),
+      _energyPoints(src._energyPoints),
+      _attackDamage(src._attackDamage)
 {
-    (void)src;
     std::cout << "ClapTrap " << _name << " copy-constructed" << std::endl;
 }
 

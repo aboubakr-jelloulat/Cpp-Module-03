@@ -3,6 +3,13 @@
 
 #include <iostream>
 
+ClapTrap::ClapTrap()
+{
+    _hitPoints = 100;
+    _attackDamage = 30;
+    std::cout << "FragTrap default constructed." << std::endl;
+}
+
 ClapTrap::ClapTrap(const std::string& name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0) 
 {
     std::cout << "ClapTrap " << _name << " constructed" << std::endl;
@@ -10,9 +17,12 @@ ClapTrap::ClapTrap(const std::string& name) : _name(name), _hitPoints(10), _ener
 
 
 ClapTrap::ClapTrap(const ClapTrap& src)
+    : _name(src._name),
+      _hitPoints(src._hitPoints),
+      _energyPoints(src._energyPoints),
+      _attackDamage(src._attackDamage)
 {
     std::cout << "ClapTrap " << _name << " copy-constructed" << std::endl;
-	*this = src;
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& src) 

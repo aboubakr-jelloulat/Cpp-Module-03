@@ -15,10 +15,12 @@ public:
     DiamondTrap(const std::string& name);
     DiamondTrap(const DiamondTrap& src);
     DiamondTrap& operator=(const DiamondTrap& src);
-    ~DiamondTrap();
+    virtual ~DiamondTrap();
 
 
 	using ScavTrap::attack;
+
+    // void takeDamage(unsigned int amount);
 
     void whoAmI();
 };

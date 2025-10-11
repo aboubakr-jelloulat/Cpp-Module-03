@@ -7,9 +7,12 @@ ClapTrap::ClapTrap(const std::string& name)
 }
 
 ClapTrap::ClapTrap(const ClapTrap& src)
+    : _name(src._name),
+      _hitPoints(src._hitPoints),
+      _energyPoints(src._energyPoints),
+      _attackDamage(src._attackDamage)
 {
-	(void)src;
-    std::cout << "ClapTrap Copy Constructor Called" << std::endl;
+    std::cout << "ClapTrap " << _name << " copy-constructed" << std::endl;
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& src)
